@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="scientiamobile" translate="label" sortOrder="10">
+            <label>ScientiaMobile</label>
+        </tab>
+        <section id="imageengine" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>ImageEngine</label>
+            <tab>scientiamobile</tab>
+            <resource>Scientiamobile_Imageengine::general_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                
+                 <field id="document" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Documentation</label>
+                    <frontend_model>Scientiamobile\Imageengine\Block\Adminhtml\System\Config\Advanced</frontend_model>
+                    <attribute type="shared">1</attribute>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+
+                <field id="welcome" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Welcome</label>
+                    <frontend_model>Scientiamobile\Imageengine\Block\Adminhtml\System\Config\Welcome</frontend_model>
+                    <attribute type="shared">1</attribute>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+
+
+
+                <field id="token" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Your Token</label>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+                <field id="default_width" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Default Width</label>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+                <field id="default_height" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="2">
+                    <label>Default Height</label>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+                <field id="default_compressionrate" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="3">
+                    <label>Default Compression Rate</label>
+                    <!-- <comment>This text will display on the frontend.</comment> -->
+                </field>
+
+
+               
+
+
+            </group>
+        </section>
+    </system>
+</config>
