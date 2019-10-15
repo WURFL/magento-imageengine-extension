@@ -1,7 +1,6 @@
 <?php
- 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Scientiamobile_Imageengine',
+    'ScientiaMobile_IO',
     __DIR__
 );

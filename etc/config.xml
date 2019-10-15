@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright © 2019 ScientiaMobile. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <smimageoptimization>
+            <general>
+                <enable>0</enable>
+                <image_engine_url></image_engine_url>
+                <unsecure_base_media_url></unsecure_base_media_url>
+                <secure_base_media_url></secure_base_media_url>
+            </general>
+        </smimageoptimization>
+    </default>
+</config>
