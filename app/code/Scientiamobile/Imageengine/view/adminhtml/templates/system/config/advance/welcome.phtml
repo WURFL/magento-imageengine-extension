@@ -1,9 +1,0 @@
-<?php
- 	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-	$mediaPrefix = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('imageengine/general/token');
-	if($mediaPrefix == null || $mediaPrefix == ""){
-?>
-
-<div class="welcome"><?php echo __('Welcome to Imagecdn, Please Enter Token'); ?></div>
-
-<?php }?>
