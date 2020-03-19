@@ -56,6 +56,7 @@ class ChangeResult
                 'smimageoptimization/general/image_engine_url',
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             );
+            $imageEngineUrl .= "/media/";
 
             $response->setBody(
                 preg_replace(

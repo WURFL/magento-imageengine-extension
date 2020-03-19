@@ -48,6 +48,7 @@ class Store
                 'smimageoptimization/general/image_engine_url',
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             );
+            $baseUrl = $baseUrl . '/media/';
         }
 
         return $baseUrl;
