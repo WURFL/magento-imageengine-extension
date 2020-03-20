@@ -1,5 +1,5 @@
 {
-  "name": "imageengine/module-magento2-image-cdn",
+  "name": "scientiamobile/module-magento2-image-cdn-imageengine",
   "description": "Image CDN Extension for Magento2 by ImageEngine",
   "require": {
     "php": "~7.0.0|~7.1.0|~7.2.0"
