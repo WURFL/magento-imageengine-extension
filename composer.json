@@ -1,11 +1,12 @@
 {
-  "name": "imageengine/magento2-image-cdn-extension",
+  "name": "imageengine/module-magento2-image-cdn",
   "description": "Image CDN Extension for Magento2 by ImageEngine",
   "require": {
     "php": "~7.0.0|~7.1.0|~7.2.0"
   },
-  "type": "magento2-module",
   "version": "1.0.16",
+  "license": "MIT",
+  "type": "magento2-module",
   "autoload": {
     "files": [
       "registration.php"
