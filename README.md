@@ -1,5 +1,11 @@
-# Magento-ImageEngine-Extension
+# ImageEngine extension for Magento 2
 
-You may also download the extension [from the Magento Marketplace](https://marketplace.magento.com/scientiamobile-magento2-module-io.html)
+This extension can be installed via composer:
 
-Follow the guide in the [official ImgeEngine documentation](https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/)
+```
+composer install imageengine/magento2-image-cdn-extension
+```
+
+Or can download and install the extension [from the Magento Marketplace](https://marketplace.magento.com/scientiamobile-magento2-module-io.html)
+
+Follow the guide in the [official ImageEngine documentation](https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/)
