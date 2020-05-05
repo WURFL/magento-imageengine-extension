@@ -3,7 +3,7 @@
 This extension can be installed via composer:
 
 ```
-composer install scientiamobile/module-magento2-image-cdn-imageengine
+composer require scientiamobile/module-magento2-image-cdn-imageengine
 ```
 
 Or you can download and install the extension [from the Magento Marketplace](https://marketplace.magento.com/scientiamobile-magento2-module-io.html)
