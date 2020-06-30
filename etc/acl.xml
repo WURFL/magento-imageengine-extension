@@ -8,7 +8,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="ScientiaMobile_IO::admin">
+                <resource id="ScientiaMobile_IO::admin" title="ScientiaMobile_IO">
                 </resource>
             </resource>
         </resources>
