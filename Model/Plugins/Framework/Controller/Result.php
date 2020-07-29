@@ -57,7 +57,7 @@ class Result
             $response->setHeader('Accept-CH', 'viewport-width, width, device-memory, dpr, rtt, downlink, ect');
             $response->setHeader('Feature-Policy', "ch-viewport-width {$imageEngineUrl};ch-width {$imageEngineUrl};ch-dpr {$imageEngineUrl};ch-device-memory {$imageEngineUrl};ch-rtt {$imageEngineUrl};ch-ect {$imageEngineUrl};ch-downlink {$imageEngineUrl}");
             $response->setHeader('link', "<{$imageEngineUrl}>; rel=preconnect");
-            $response->setHeader('access-control-allow-headers', 'Origin, X-Requested-With, Content-Type, Accept');
+            $response->setHeader('access-control-allow-headers', 'Origin, X-Requested-With, Content-Type, Accept, rtt');
         }
 
         return $result;
