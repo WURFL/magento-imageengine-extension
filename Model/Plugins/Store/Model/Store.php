@@ -1,14 +1,15 @@
 <?php
 /**
- * ChangeResult.php
- *
  * @copyright Copyright © 2019 ScientiaMobile. All rights reserved.
  * @author    pasichnikroman@gmail.com
  */
 
 namespace ScientiaMobile\IO\Model\Plugins\Store\Model;
 
-use \Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\Url\ScopeInterface as Subject;
+use Magento\Framework\UrlInterface;
+use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class Store
@@ -16,14 +17,13 @@ use \Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Store
 {
-
     /**
      * @var ScopeConfigInterface
      */
     private $scopeConfig;
 
     /**
-     * ChangeResult constructor.
+     * Store constructor.
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(ScopeConfigInterface $scopeConfig)
@@ -31,22 +31,28 @@ class Store
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * @param Subject $subject
+     * @param $baseUrl
+     * @param string $type
+     * @param null $secure
+     * @return mixed|string
+     */
     public function afterGetBaseUrl(
-        \Magento\Framework\Url\ScopeInterface $subject,
+        Subject $subject,
         $baseUrl,
-        $type = \Magento\Framework\UrlInterface::URL_TYPE_LINK,
+        $type = UrlInterface::URL_TYPE_LINK,
         $secure = null
     ) {
-
         $status = $this->scopeConfig->getValue(
             'smimageoptimization/general/enable',
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORE
         );
 
-        if ($type == \Magento\Framework\UrlInterface::URL_TYPE_MEDIA && $status) {
+        if ($type == UrlInterface::URL_TYPE_MEDIA && $status) {
             $baseUrl = $this->scopeConfig->getValue(
                 'smimageoptimization/general/image_engine_url',
-                \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+                ScopeInterface::SCOPE_STORE
             );
             $baseUrl = $baseUrl . '/media/';
         }
