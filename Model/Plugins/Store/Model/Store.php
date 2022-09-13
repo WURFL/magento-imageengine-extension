@@ -11,12 +11,9 @@ use Magento\Framework\Url\ScopeInterface as Subject;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\ScopeInterface;
 
-/**
- * Class Store
- * @package ScientiaMobile\IO\Model\Plugins\Store\Model
- */
 class Store
 {
+
     /**
      * @var ScopeConfigInterface
      */
@@ -32,17 +29,19 @@ class Store
     }
 
     /**
+     * After get by URL
+     *
      * @param Subject $subject
-     * @param $baseUrl
+     * @param string $baseUrl
      * @param string $type
      * @param null $secure
      * @return mixed|string
      */
     public function afterGetBaseUrl(
         Subject $subject,
-        $baseUrl,
-        $type = UrlInterface::URL_TYPE_LINK,
-        $secure = null
+                $baseUrl,
+                $type = UrlInterface::URL_TYPE_LINK,
+                $secure = null
     ) {
         $status = $this->scopeConfig->getValue(
             'smimageoptimization/general/enable',
