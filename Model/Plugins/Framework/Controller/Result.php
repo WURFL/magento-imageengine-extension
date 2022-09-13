@@ -50,8 +50,8 @@ class Result
                 ScopeInterface::SCOPE_STORE
             );
 
-            $response->setHeader('Accept-CH', 'viewport-width, width, dpr, ect');
-            $response->setHeader('Permissions-Policy', "ch-viewport-width=(\"{$imageEngineUrl}\"), ch-width=(\"{$imageEngineUrl}\"), ch-dpr=(\"{$imageEngineUrl}\"), ch-ect=(\"{$imageEngineUrl}\"), ch-downlink=(\"{$imageEngineUrl}\")");
+            $response->setHeader('Accept-CH', 'sec-ch-dpr, sec-ch-width, sec-ch-viewport-width');
+            $response->setHeader('Permissions-Policy', "ch-dpr=(\"{$imageEngineUrl}\"), ch-width=(\"{$imageEngineUrl}\"), ch-viewport-width=(\"{$imageEngineUrl}\")");
             $response->setHeader('link', "<{$imageEngineUrl}>; rel=preconnect");
             $response->setHeader('access-control-allow-headers', 'Origin, X-Requested-With, Content-Type, Accept');
         }
