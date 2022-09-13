@@ -11,10 +11,6 @@ use Magento\Framework\App\Response\Http as ResponseHttp;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Store\Model\ScopeInterface;
 
-/**
- * Class Result
- * @package ScientiaMobile\IO\Model\Plugins
- */
 class Result
 {
     /**
