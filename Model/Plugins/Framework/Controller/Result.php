@@ -50,8 +50,8 @@ class Result
                 ScopeInterface::SCOPE_STORE
             );
 
-            $response->setHeader('Accept-CH', 'sec-ch-dpr, sec-ch-width, sec-ch-viewport-width');
-            $response->setHeader('Permissions-Policy', "ch-dpr=(\"{$imageEngineUrl}\"), ch-width=(\"{$imageEngineUrl}\"), ch-viewport-width=(\"{$imageEngineUrl}\")");
+            $response->setHeader('Accept-CH', 'sec-ch-dpr, sec-ch-width, sec-ch-viewport-width, sec-ch-ect, sec-ch-ua-full-version, sec-ch-ua-full-version-list, sec-ch-ua-platform-version, sec-ch-ua-arch, sec-ch-ua-wow64, sec-ch-ua-bitness, sec-ch-ua-model');
+            $response->setHeader('Permissions-Policy', "ch-dpr=(\"{$imageEngineUrl}\"), ch-width=(\"{$imageEngineUrl}\"), ch-viewport-width=(\"{$imageEngineUrl}\"), ch-ect=(\"{$imageEngineUrl}\"), ch-ua-full-version=(\"{$imageEngineUrl}\"), ch-ua-full-version-list=(\"{$imageEngineUrl}\"), ch-ua-platform-version=(\"{$imageEngineUrl}\"), ch-ua-arch=(\"{$imageEngineUrl}\"), ch-ua-wow64=(\"{$imageEngineUrl}\"), ch-ua-bitness=(\"{$imageEngineUrl}\"), ch-ua-model=(\"{$imageEngineUrl}\")");
             $response->setHeader('link', "<{$imageEngineUrl}>; rel=preconnect");
             $response->setHeader('access-control-allow-headers', 'Origin, X-Requested-With, Content-Type, Accept');
         }
