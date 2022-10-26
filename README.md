@@ -11,7 +11,7 @@ The extension can then be enabled like this:
 magento module:enable scientiamobile/module-magento2-image-cdn-imageengine
 ```
 
-Follow the guide in the [official ImageEngine documentation]([https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/](https://support.imageengine.io/hc/en-us/articles/360059128332#h_01F6F5J0AFMN3KBX71A9G8TY9C))
+Follow the guide in the [official ImageEngine documentation]([https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/](https://support.imageengine.io/hc/en-us/articles/360059128332#h_01F6F5J0AFMN3KBX71A9G8TY9C)
 
 # Change Log
 
