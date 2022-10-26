@@ -5,10 +5,13 @@ This extension can be installed via composer:
 ```
 composer require scientiamobile/module-magento2-image-cdn-imageengine
 ```
+The extension can then be enabled like this:
 
-Or you can download and install the extension [from the Magento Marketplace](https://marketplace.magento.com/scientiamobile-magento2-module-io.html)
+```
+magento module:enable scientiamobile/module-magento2-image-cdn-imageengine
+```
 
-Follow the guide in the [official ImageEngine documentation](https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/)
+Follow the guide in the [official ImageEngine documentation]([https://imageengine.io/docs/integration-guides/imageengine-magento2-plugin/](https://support.imageengine.io/hc/en-us/articles/360059128332#h_01F6F5J0AFMN3KBX71A9G8TY9C))
 
 # Change Log
 
