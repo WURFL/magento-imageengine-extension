@@ -10,22 +10,32 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Url\ScopeInterface as Subject;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Model\Store as ModelStore;
 
 class Store
 {
-
     /**
      * @var ScopeConfigInterface
      */
     private $scopeConfig;
 
     /**
-     * Store constructor.
-     * @param ScopeConfigInterface $scopeConfig
+     * @var ModelStore
      */
-    public function __construct(ScopeConfigInterface $scopeConfig)
-    {
+    private $store;
+
+    /**
+     * Store constructor.
+     *
+     * @param ScopeConfigInterface $scopeConfig
+     * @param ModelStore $store
+     */
+    public function __construct(
+        ScopeConfigInterface $scopeConfig,
+        ModelStore $store
+    ) {
         $this->scopeConfig = $scopeConfig;
+        $this->store = $store;
     }
 
     /**
@@ -39,9 +49,9 @@ class Store
      */
     public function afterGetBaseUrl(
         Subject $subject,
-                $baseUrl,
-                $type = UrlInterface::URL_TYPE_LINK,
-                $secure = null
+        string  $baseUrl,
+        $type = UrlInterface::URL_TYPE_LINK,
+        $secure = null
     ) {
         $status = $this->scopeConfig->getValue(
             'smimageoptimization/general/enable',
@@ -49,13 +59,18 @@ class Store
         );
 
         if ($type == UrlInterface::URL_TYPE_MEDIA && $status) {
-            $baseUrl = $this->scopeConfig->getValue(
-                'smimageoptimization/general/image_engine_url',
-                ScopeInterface::SCOPE_STORE
-            );
-            $baseUrl = $baseUrl . '/media/';
+            if ($this->store->isCurrentlySecure()) {
+                $baseUrl = $this->scopeConfig->getValue(
+                    'web/secure/base_media_url',
+                    ScopeInterface::SCOPE_STORE
+                );
+            } else {
+                $baseUrl = $this->scopeConfig->getValue(
+                    'web/unsecure/base_media_url',
+                    ScopeInterface::SCOPE_STORE
+                );
+            }
         }
-
         return $baseUrl;
     }
 }

@@ -10,6 +10,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Response\Http as ResponseHttp;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Model\Store;
 
 class Result
 {
@@ -19,12 +20,22 @@ class Result
     private $scopeConfig;
 
     /**
-     * Result constructor.
-     * @param ScopeConfigInterface $scopeConfig
+     * @var Store
      */
-    public function __construct(ScopeConfigInterface $scopeConfig)
-    {
+    private $store;
+
+    /**
+     * Result constructor.
+     *
+     * @param ScopeConfigInterface $scopeConfig
+     * @param Store $store
+     */
+    public function __construct(
+        ScopeConfigInterface $scopeConfig,
+        Store $store
+    ) {
         $this->scopeConfig = $scopeConfig;
+        $this->store = $store;
     }
 
     /**
@@ -43,13 +54,18 @@ class Result
             'smimageoptimization/general/enable',
             ScopeInterface::SCOPE_STORE
         );
-
         if ($status) {
-            $imageEngineUrl = $this->scopeConfig->getValue(
-                'smimageoptimization/general/image_engine_url',
-                ScopeInterface::SCOPE_STORE
-            );
-
+            if ($this->store->isCurrentlySecure()) {
+                $imageEngineUrl = $this->scopeConfig->getValue(
+                    'web/secure/base_media_url',
+                    ScopeInterface::SCOPE_STORE
+                );
+            } else {
+                $imageEngineUrl = $this->scopeConfig->getValue(
+                    'web/unsecure/base_media_url',
+                    ScopeInterface::SCOPE_STORE
+                );
+            }
             $response->setHeader('Accept-CH', 'sec-ch-dpr, sec-ch-width, sec-ch-viewport-width, sec-ch-ect, sec-ch-ua-full-version, sec-ch-ua-full-version-list, sec-ch-ua-platform-version, sec-ch-ua-arch, sec-ch-ua-wow64, sec-ch-ua-bitness, sec-ch-ua-model');
             $response->setHeader('Permissions-Policy', "ch-dpr=(\"{$imageEngineUrl}\"), ch-width=(\"{$imageEngineUrl}\"), ch-viewport-width=(\"{$imageEngineUrl}\"), ch-ect=(\"{$imageEngineUrl}\"), ch-ua-full-version=(\"{$imageEngineUrl}\"), ch-ua-full-version-list=(\"{$imageEngineUrl}\"), ch-ua-platform-version=(\"{$imageEngineUrl}\"), ch-ua-arch=(\"{$imageEngineUrl}\"), ch-ua-wow64=(\"{$imageEngineUrl}\"), ch-ua-bitness=(\"{$imageEngineUrl}\"), ch-ua-model=(\"{$imageEngineUrl}\")");
             $response->setHeader('link', "<{$imageEngineUrl}>; rel=preconnect");
