@@ -6,7 +6,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
 <system>
-    <tab id="scientiamobile" translate="label" sortOrder="10">
+    <tab id="scientiamobile" translate="label" sortOrder="1000000">
         <label>ImageEngine</label>
     </tab>
     <section id="smimageoptimization" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -21,10 +21,15 @@
                 <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
             </field>
             <field id="image_engine_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                <label>ImageEngine media url</label>
+                <label>ImageEngine Delivery Address</label>
                 <comment>This url will change unsecure/base_media_url and secure/base_media_url.</comment>
+            </field>
+            <field id="media_path" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Media Path</label>
+                <comment><![CDATA[The path, or folder, where media is stored in Magento.<br/>Make sure you have add Media folder name and it start & end with '/' (slash) e.g. '/media/']]></comment>
             </field>
         </group>
     </section>
 </system>
 </config>
+

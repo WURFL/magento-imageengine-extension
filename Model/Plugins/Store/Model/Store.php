@@ -53,7 +53,11 @@ class Store
                 'smimageoptimization/general/image_engine_url',
                 ScopeInterface::SCOPE_STORE
             );
-            $baseUrl = $baseUrl . '/media/';
+            $mediaPath = $this->scopeConfig->getValue(
+                'smimageoptimization/general/media_path',
+                ScopeInterface::SCOPE_STORE
+            );
+            $baseUrl = $baseUrl . $mediaPath;
         }
 
         return $baseUrl;

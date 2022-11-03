@@ -12,6 +12,7 @@
                 <image_engine_url></image_engine_url>
                 <unsecure_base_media_url></unsecure_base_media_url>
                 <secure_base_media_url></secure_base_media_url>
+                <media_path>/media/</media_path>
             </general>
         </smimageoptimization>
     </default>
