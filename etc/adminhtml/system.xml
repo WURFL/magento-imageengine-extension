@@ -22,7 +22,6 @@
             </field>
             <field id="image_engine_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>ImageEngine Delivery Address</label>
-                <comment>This url will change unsecure/base_media_url and secure/base_media_url.</comment>
             </field>
             <field id="media_path" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Media Path</label>
