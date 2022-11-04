@@ -22,10 +22,12 @@
             </field>
             <field id="image_engine_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>ImageEngine Delivery Address</label>
+                <comment>Enter the complete delivery address including `https://`.</comment>
+                <validate>required-entry validate-url</validate>
             </field>
             <field id="media_path" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Media Path</label>
-                <comment><![CDATA[The path, or folder, where media is stored in Magento.<br/>Make sure you have add Media folder name and it start & end with '/' (slash) e.g. '/media/']]></comment>
+                <comment><![CDATA[The path, or folder, where media is stored in Magento.<br/>Make sure you have add Media folder name and it start & end with '/' (slash) e.g. '/media/.']]></comment>
                 <validate>required-entry</validate>
             </field>
         </group>
