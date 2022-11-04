@@ -15,6 +15,12 @@ Follow the guide in the [official ImageEngine documentation](https://support.ima
 
 # Change Log
 
+### Version : V1.0.23
+- Fixed hardcoded media path.
+- Added new config text field for dynamic media folder.
+- Added validation for address URL.
+
+
 ### Version : V1.0.22
 - **Fixed:** Update client hint headers issue [#13](https://github.com/WURFL/magento-imageengine-extension/issues/13)
 - Issue solved for `img-src`,`script` and `style` are controlled with a content security policy.
