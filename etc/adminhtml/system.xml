@@ -13,7 +13,7 @@
         <class>separator-top</class>
         <label>Optimize Images with ImageEngine</label>
         <tab>scientiamobile</tab>
-        <resource>ScientiaMobile_IO::config</resource>
+        <resource>ScientiaMobile_IO::admin</resource>
         <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
             <label>General Configuration</label>
             <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
