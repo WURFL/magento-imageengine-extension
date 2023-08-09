@@ -15,6 +15,9 @@ Follow the guide in the [official ImageEngine documentation](https://support.ima
 
 # Change Log
 
+### Version : V1.0.25
+- Fix ACL resource definition
+
 ### Version : V1.0.24
 - Updated PHP version constraint, added PHP 8.2 compatibility
 - Compatible with **Magento 2.4.6-p1**
