@@ -2,9 +2,9 @@
   "name": "scientiamobile/module-magento2-image-cdn-imageengine",
   "description": "Image CDN Extension for Magento2 by ImageEngine",
   "require": {
-    "php": "~7.1.0|~7.2.0|~7.3.0|~7.4.0|~8.1.0"
+    "php": "~7.1.0|~7.2.0|~7.3.0|~7.4.0|~8.1.0|~8.2.0"
   },
-  "version": "1.0.23",
+  "version": "1.0.24",
   "license": "MIT",
   "type": "magento2-module",
   "autoload": {
