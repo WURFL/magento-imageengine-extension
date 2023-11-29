@@ -8,12 +8,22 @@ composer require scientiamobile/module-magento2-image-cdn-imageengine
 The extension can then be enabled like this:
 
 ```
-magento module:enable scientiamobile/module-magento2-image-cdn-imageengine
+./bin/magento module:enable ScientiaMobile_IO
 ```
 
 Follow the guide in the [official ImageEngine documentation](https://support.imageengine.io/hc/en-us/articles/360059128332#h_01F6F5J0AFMN3KBX71A9G8TY9C)
 
+## Compatibility
+
+Compatible with Magento Open Source and Adobe Commerce.
+
 # Change Log
+
+### Version : V1.0.26
+- Compatible with **Magento Commerce** (tested with Magento Commerce 2.4.5-p1)
+- Readme updates
+  - Corrected module enable instruction - issue [#21](https://github.com/WURFL/magento-imageengine-extension/issues/21)
+  - Add Compatibility section
 
 ### Version : V1.0.25
 - Fix ACL resource definition
