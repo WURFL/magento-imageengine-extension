@@ -19,6 +19,10 @@ Compatible with Magento Open Source and Adobe Commerce.
 
 # Change Log
 
+### Version : V1.0.27
+- Updated PHP version constraint, added PHP 8.3 compatibility
+- Compatible with **Magento 2.4.7**
+
 ### Version : V1.0.26
 - Compatible with **Magento Commerce** (tested with Magento Commerce 2.4.5-p1)
 - Readme updates
